@@ -3,6 +3,8 @@
 
 A full-stack application that acts as a merciless AI examiner. Feed it your thesis PDF or your CV and it will interrogate you like a 30-year veteran committee member or a Staff Engineer who has already decided to reject you.
 
+![alt text](images/image.png)
+
 ---
 
 ## Features
@@ -23,6 +25,12 @@ A full-stack application that acts as a merciless AI examiner. Feed it your thes
 - **Escalating pressure** - questions get harder after question 3, targeting the single most vulnerable point in your document
 
 - **Post-session report** with score /10, verdict, strengths, critical gaps, and study priorities - all in the language you chose
+
+<p align="center">
+  <img src="images/image-1.png"/>
+</p>
+
+![alt text](images/image-2.png)
 
 ---
 
