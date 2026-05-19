@@ -118,6 +118,13 @@ Web Speech API is supported in:
 
 ---
 
+## Limitations
+
+* **API Rate Limits (Free Tier):** This project uses the recommended free tier of the `gemini-2.5-flash` model. Because the application resends your entire document (up to 300,000 characters) with every new question to maintain high-quality context, it consumes a large number of tokens per interaction. If you answer questions too quickly, you may hit Google's "Tokens Per Minute" limit (1M TPM) and encounter a `429 RESOURCE_EXHAUSTED` error. Taking a few seconds to think about your answer naturally prevents this. If you desire a more responsive experience, consider upgrading to a paid Gemini API plan with higher rate limits.
+* **Text-Only Document Parsing:** The backend utilizes `PyMuPDF` (fitz) to extract text from uploaded PDFs. It does not parse or "see" images, charts, graphs, or complex tables within the document. If your thesis or CV relies heavily on visual data, the examiner will not be able to question you on those specific visual elements.
+* **Browser-Dependent STT & TTS:** The Voice Defense feature relies on the native Web Speech API (`SpeechRecognition` and `SpeechSynthesis`). Performance, voice quality, and accuracy are entirely dependent on your browser and operating system. Google Chrome provides the most stable and accurate experience, while browsers like Firefox or Safari may have degraded voice capabilities or require additional permissions.
+* **Stateless Sessions:** Currently, sessions are kept in server memory. If the backend server restarts, all active examination sessions and their chat histories will be lost.
+
 ## License
 
-MIT
+MIT - personal use, fork freely.
